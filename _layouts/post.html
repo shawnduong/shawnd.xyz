@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+{% include blog-head.html %}
+
+<body>
+
+	{% include blog-banner.html %}
+
+	<div id="main">
+
+		<div id="listing">
+			<h2>{{ page.title }}</h2>
+			<h3><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></h3>
+		</div>
+
+		<div id="post">
+			{{ content }}
+		</div>
+
+	</div>
+
+</body>
+
+</html>
